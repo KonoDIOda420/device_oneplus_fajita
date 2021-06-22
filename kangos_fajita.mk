@@ -28,9 +28,18 @@ $(call inherit-product, vendor/kangos/config/common.mk)
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# FOD Animation
+EXTRA_FOD_ANIMATIONS := true
+
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_WIFI_EXT := true
+TARGET_INCLUDE_AOSP_REPLACEMENT := true
+
+#Kang OS Stuff
+KANGOS_BUILDTYPE := UNOFFICIAL
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.kangos.maintainer=konoDIOda
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := kangos_fajita
